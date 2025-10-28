@@ -38,7 +38,8 @@ if ($pathBlueContent -contains 'up')
 Write-Host "Warming up $($siteToWarm)"
 Do {
     $time = Measure-Command {
-        $res = Invoke-WebRequest $siteToWarm
+        $res = Invoke-WebRequest $siteToWarm -UseBasicParsing
+
     }
     $ms = $time.TotalMilliSeconds
     If ($ms -ge 400) {
