@@ -15,7 +15,7 @@ jobs:
 
     - name: Deploy to inactive IIS folder
       run: |
-        $repoPath = "${{ github.workspace }}\calculator-app"  # path of checked-out code
+        $repoPath = "${{ github.workspace }}"
         $pathBlue = "C:\inetpub\wwwroot\alwaysup-blue"
         $pathGreen = "C:\inetpub\wwwroot\alwaysup-green"
         $pathBlueContent = Get-Content "$pathBlue\up.html"
