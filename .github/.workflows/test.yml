@@ -1,0 +1,10 @@
+name: Test PS
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - run: powershell -ExecutionPolicy Bypass -File "${{ github.workspace }}\test.ps1"
